@@ -1,9 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".CalorieActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="What is your Goal Weight? (lbs)"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"/>
+
+
+
+    <EditText
+        android:id="@+id/goalWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="6"
+        android:textAlignment="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Your Current Weight (lbs)"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"/>
+
+
+
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="6"
+        android:textAlignment="center"/>
+
+
+    <TextView
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="How many weeks do you wish to achieve your goal?"
+        android:textSize="20dp" />
+
+
+
+    <EditText
+        android:id="@+id/weeks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="6"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="212dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="How active are you?"
+        android:textSize="20dp" />
+    <TextView
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="1: Sedentary 2: Lightly Active 3: Moderately Active 4: Very Active 5: Athlete Level"
+        android:textSize="15dp" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_gravity="center">
+
+        <RadioGroup
+            android:id="@+id/activityRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/A1Radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1" />
+
+            <RadioButton
+                android:id="@+id/A2Radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2" />
+            <RadioButton
+                android:id="@+id/A3Radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/A4Radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4" />
+            <RadioButton
+                android:id="@+id/A5Radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5" />
+        </RadioGroup>
+    </TableRow>
+
+
+
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Calculate Estimated Daily Calorie "
+        android:layout_marginTop="20dp"
+        android:onClick="calculateCalories"/>
+
+
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="180dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:onClick="backToMenu"
+        android:text="Back to Menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</LinearLayout>

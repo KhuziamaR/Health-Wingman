@@ -2,6 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/menuItem"
-        android:title="Menu Item" />
+        android:id="@+id/menuTab"
+        android:title="Main Menu" />
 </menu>
